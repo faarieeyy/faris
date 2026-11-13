@@ -1,26 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap');
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-pitch: #050505;
+  --bg-card: #0d0d0f;
+  --bg-card-hover: #141418;
+  --crimson: #dc2626;
+  --crimson-dark: #881337;
+  --crimson-glow: rgba(220, 38, 38, 0.45);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  background-color: #050505;
+  color: #ededed;
+  font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #050505;
+  color: #ffffff;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #080808;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #dc2626;
+}
+
+/* Custom Typography Utilities */
+.font-bebas {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.04em;
+}
+
+.font-caveat {
+  font-family: 'Caveat', cursive;
+}
+
+/* Red Ambient and Glow Utilities */
+.text-crimson {
+  color: #ef4444;
+}
+
+.bg-crimson {
+  background-color: #dc2626;
+}
+
+.border-crimson {
+  border-color: #dc2626;
+}
+
+.glow-text-red {
+  text-shadow: 0 0 25px rgba(220, 38, 38, 0.65), 0 0 50px rgba(185, 28, 28, 0.35);
+}
+
+.glow-box-red {
+  box-shadow: 0 0 35px -5px rgba(220, 38, 38, 0.3), 0 0 15px -3px rgba(220, 38, 38, 0.2);
+}
+
+.glow-card-subtle {
+  box-shadow: 0 0 20px -3px rgba(220, 38, 38, 0.12);
+}
+
+/* Noise overlay */
+.bg-noise {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Glowing pulse animation (pure opacity, zero scale changes) */
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+/* Shimmer laser sweep for PORTFOLIO typography */
+@keyframes textShimmer {
+  0% {
+    background-position: -250% 0;
+  }
+  100% {
+    background-position: 250% 0;
+  }
+}
+
+.animate-shimmer-red {
+  background: linear-gradient(
+    110deg,
+    #991b1b 0%,
+    #b91c1c 20%,
+    #ef4444 40%,
+    #ff8080 50%,
+    #ef4444 60%,
+    #b91c1c 80%,
+    #991b1b 100%
+  );
+  background-size: 250% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textShimmer 9s linear infinite;
+}
+
+/* Smooth kinetic slipping/shifting loop text animations */
+@keyframes marqueeSlipLeft {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes marqueeSlipRight {
+  0% {
+    transform: translate3d(-50%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-marquee-left {
+  animation: marqueeSlipLeft 55s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-right {
+  animation: marqueeSlipRight 65s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-left-fast {
+  animation: marqueeSlipLeft 48s linear infinite;
+  will-change: transform;
+}
+
+/* Smooth selection color */
+::selection {
+  background-color: #dc2626;
+  color: #ffffff;
 }
