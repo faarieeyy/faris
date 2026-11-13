@@ -134,8 +134,6 @@ export default function Hero() {
       {/* Background Ambient Red Glows */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] sm:w-[850px] lg:w-[1100px] h-[350px] sm:h-[550px] bg-red-600/15 rounded-full blur-[140px] pointer-events-none -z-10 animate-pulse-glow" />
       <div className="absolute top-1/3 left-1/6 w-[350px] h-[350px] bg-red-800/10 rounded-full blur-[110px] pointer-events-none -z-10" />
-      {/* Mobile-enhanced vibrant red glow directly behind PORTFOLIO typography */}
-      <div className="absolute top-[8%] sm:top-[12%] left-1/2 -translate-x-1/2 w-[92%] sm:w-[70%] max-w-[700px] h-[140px] sm:h-[200px] bg-red-600/25 sm:bg-red-600/10 rounded-full blur-[70px] pointer-events-none -z-10" />
 
       {/* Massive Full-Width Background Typography: PORTFOLIO (Razor-Sharp, Clean Vector Typography matching reference) */}
       <motion.div
@@ -144,14 +142,14 @@ export default function Hero() {
           y: -mouseOffset.y,
         }}
         transition={{ type: "spring", stiffness: 100, damping: 25 }}
-        className="absolute top-[2%] xs:top-[3%] sm:top-[10%] lg:top-[12%] left-0 right-0 w-full flex items-center justify-center pointer-events-none select-none overflow-hidden z-0 px-1 sm:px-2"
+        className="absolute top-[13%] sm:top-[10%] lg:top-[12%] left-0 right-0 w-full flex items-center justify-center pointer-events-none select-none overflow-hidden z-0 px-2"
       >
         <div className="relative flex items-center justify-center w-full">
-          {/* Elongated, tall & high-visibility editorial typography for mobile view with rich crimson gradient */}
+          {/* Razor-sharp, Clean Editorial Typography matching reference with natural proportions */}
           <h1
-            className="font-bebas text-[26vw] xs:text-[25vw] sm:text-[22vw] font-black leading-none tracking-tight sm:tracking-tight text-center w-full whitespace-nowrap select-none transform scale-y-[1.65] xs:scale-y-[1.5] sm:scale-y-100 origin-top drop-shadow-[0_0_30px_rgba(239,68,68,0.35)] sm:drop-shadow-none"
+            className="font-bebas text-[20vw] sm:text-[22vw] font-black leading-none tracking-wider sm:tracking-tight text-center w-full whitespace-nowrap select-none"
             style={{
-              background: "linear-gradient(180deg, #ff2a2a 0%, #e0121a 28%, #b30e14 58%, #70060a 82%, #1a0203 100%)",
+              background: "linear-gradient(180deg, #d8161d 0%, #b30e14 32%, #550407 72%, #050505 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
             }}
@@ -160,7 +158,7 @@ export default function Hero() {
           </h1>
 
           {/* Atmospheric Dark Bottom Shadow Veil */}
-          <div className="absolute inset-x-0 bottom-0 h-10 sm:h-40 bg-gradient-to-t from-[#050505] via-[#050505]/75 to-transparent pointer-events-none" />
+          <div className="absolute inset-x-0 bottom-0 h-24 sm:h-40 bg-gradient-to-t from-[#050505] via-[#050505]/80 to-transparent pointer-events-none" />
         </div>
       </motion.div>
 
