@@ -346,7 +346,7 @@ export default function Hero() {
               {/* Stat 1: CGPA */}
               <div className="flex flex-col lg:flex-row items-start lg:items-baseline gap-1 lg:gap-4 lg:border-b lg:border-zinc-900/80 lg:pb-4">
                 <span className="font-bebas text-4xl sm:text-5xl xl:text-7xl font-bold text-red-500 leading-none tracking-tight drop-shadow-[0_0_12px_rgba(239,68,68,0.4)]">
-                  <Counter value={6.9} decimals={1} duration={1.6} />
+                  <Counter value={7.0} decimals={1} duration={1.6} />
                 </span>
                 <div>
                   <div className="text-[11px] sm:text-xs lg:text-sm font-bold text-white tracking-wider uppercase">

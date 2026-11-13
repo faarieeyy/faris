@@ -12,7 +12,7 @@ export default function Education() {
       institution: "Yenepoya Institute of Technology (Visvesvaraya Technological University)",
       period: "2023 – 2027",
       scoreType: "CGPA",
-      scoreVal: 6.9,
+      scoreVal: 7.0,
       decimals: 1,
       suffix: "",
       isCurrent: true,
