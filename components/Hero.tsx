@@ -135,19 +135,19 @@ export default function Hero() {
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] sm:w-[850px] lg:w-[1100px] h-[350px] sm:h-[550px] bg-red-600/15 rounded-full blur-[140px] pointer-events-none -z-10 animate-pulse-glow" />
       <div className="absolute top-1/3 left-1/6 w-[350px] h-[350px] bg-red-800/10 rounded-full blur-[110px] pointer-events-none -z-10" />
 
-      {/* Massive Full-Width Background Typography: FARIS (Edge-to-Edge Horizontal Stretch) */}
+      {/* Massive Full-Width Background Typography: FARIS (Subtle, Refined Horizontal Expansion) */}
       <motion.div
         animate={{
           x: -mouseOffset.x,
           y: -mouseOffset.y,
         }}
         transition={{ type: "spring", stiffness: 100, damping: 25 }}
-        className="absolute top-[11%] sm:top-[9%] lg:top-[10%] left-0 right-0 w-full flex items-center justify-center pointer-events-none select-none overflow-hidden z-0 px-0"
+        className="absolute top-[12%] sm:top-[10%] lg:top-[11%] left-0 right-0 w-full flex items-center justify-center pointer-events-none select-none overflow-hidden z-0 px-2 sm:px-4"
       >
         <div className="relative flex items-center justify-center w-full">
-          {/* Stretched horizontally to left and right edges */}
+          {/* Refined horizontal expansion towards left and right without edge clipping */}
           <h1
-            className="font-bebas text-[34vw] xs:text-[36vw] sm:text-[32vw] md:text-[30vw] lg:text-[28vw] font-black leading-none tracking-[0.16em] sm:tracking-[0.18em] text-center w-full whitespace-nowrap select-none transform scale-x-[1.14] sm:scale-x-[1.1] origin-center"
+            className="font-bebas text-[27vw] xs:text-[29vw] sm:text-[26vw] md:text-[24vw] lg:text-[23vw] font-black leading-none tracking-[0.09em] sm:tracking-[0.11em] text-center w-full whitespace-nowrap select-none transform scale-x-[1.05] sm:scale-x-[1.03] origin-center"
             style={{
               background: "linear-gradient(180deg, #d8161d 0%, #b30e14 32%, #550407 72%, #050505 100%)",
               WebkitBackgroundClip: "text",
